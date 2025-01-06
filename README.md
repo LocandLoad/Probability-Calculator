@@ -1,4 +1,8 @@
-To use, compile the probability calculator. After compiling, run the executable with the arguments in this order: executable "p" "k" "n".
+To use, download probabilityCalculator.cpp and BigInt.hpp.
+
+Compile the probabilityCalculator.cpp into an executable.
+
+After compiling, run the executable with the arguments in this order: executable "p" "k" "n".
 
 p is a number between 0 and 1 representing the probability of some event happening.
 
