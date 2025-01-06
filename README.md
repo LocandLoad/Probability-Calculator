@@ -10,4 +10,4 @@ Replace k with ? to calculate every chance of the event happening from 0 to n.
 
 n is the number of times the event will be run.
 
-The answer will be in the format of "Answer: " probability from 0-1 " / "  probability as a percentage
+The answer will be in the format of "Answer: " probability between 0 and 1 " / "  probability as a percentage
