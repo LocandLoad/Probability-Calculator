@@ -54,13 +54,13 @@ int main(int argc, char** argv)
     if (argc != 4)
     {
         cout << "Requires 3 args (Format: p, k, n)" << endl;
-        return 0;
+        return 1;
     }
     double p = atof(argv[1]);
     if ((p < 0) || (p>1))
     {
         cout << "Arg p is required to be between 0 and 1" << endl;
-        return 0;
+        return 1;
     }
     double q = 1 - p;
     int k;
@@ -92,17 +92,17 @@ int main(int argc, char** argv)
         if (k > n)
         {
             cout << "Cannot calculate k greater than n" << endl;
-            return 0;
+            return 1;
         }
         if (k < 0)
         {
             cout << "Cannot calculate negative k" << endl;
-            return 0;
+            return 1;
         }
         answer = binomialMass(p,k,n);
         cout << "Answer: " << answer << " / " << answer * 100 << "%" << endl;
     }
 
     
-    return 1;
+    return 0;
 }
