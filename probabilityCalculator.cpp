@@ -57,9 +57,18 @@ int main(int argc, char** argv)
         return 0;
     }
     double p = atof(argv[1]);
+    if ((p < 0) || (p>1))
+    {
+        cout << "Arg p is required to be between 0 and 1" << endl;
+        return 0;
+    }
     double q = 1 - p;
     int k;
     int n = atoi(argv[3]);
+    if (n < 0)
+    {
+        cout << "Cannot calculate negative n" << endl;
+    }
     long long constantThing;
     __long_double_t otherThing;
     __long_double_t answer;
@@ -80,10 +89,20 @@ int main(int argc, char** argv)
     else
     {
         k = atoi(argv[2]);
+        if (k > n)
+        {
+            cout << "Cannot calculate k greater than n" << endl;
+            return 0;
+        }
+        if (k < 0)
+        {
+            cout << "Cannot calculate negative k" << endl;
+            return 0;
+        }
         answer = binomialMass(p,k,n);
         cout << "Answer: " << answer << " / " << answer * 100 << "%" << endl;
     }
 
     
-    return 0;
+    return 1;
 }
